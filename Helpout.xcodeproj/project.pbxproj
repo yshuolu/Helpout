@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D07FF1719EB236300AADB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF1619EB236300AADB12 /* main.m */; };
+		8D07FF1A19EB236300AADB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF1919EB236300AADB12 /* AppDelegate.m */; };
+		8D07FF2019EB236300AADB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D07FF1E19EB236300AADB12 /* Main.storyboard */; };
+		8D07FF2219EB236300AADB12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D07FF2119EB236300AADB12 /* Images.xcassets */; };
+		8D07FF2519EB236300AADB12 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D07FF2319EB236300AADB12 /* LaunchScreen.xib */; };
+		8D07FF3119EB236400AADB12 /* HelpoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF3019EB236400AADB12 /* HelpoutTests.m */; };
+		8D07FF3D19EB269400AADB12 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF3C19EB269400AADB12 /* MainViewController.m */; };
+		8D07FF4019EB26A000AADB12 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF3F19EB26A000AADB12 /* SettingViewController.m */; };
+		8D07FF4319EB273C00AADB12 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF4219EB273C00AADB12 /* MapViewController.m */; };
+		8D07FF4619EB28C400AADB12 /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF4519EB28C400AADB12 /* TabBarView.m */; };
+		8D07FF4819EB31C900AADB12 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D07FF4719EB31C900AADB12 /* MapKit.framework */; };
+		8D07FF4C19EB499C00AADB12 /* SearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D07FF4B19EB499C00AADB12 /* SearchBarView.m */; };
+		8D42040E19F1CC5B00432DF5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D42030E19F1CC5B00432DF5 /* FacebookSDK.framework */; };
+		8D4204C019F1CECC00432DF5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4204BF19F1CECC00432DF5 /* LoginViewController.m */; };
+		8D4204C419F1D25A00432DF5 /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D4204C319F1D25A00432DF5 /* login_background.png */; };
+		8D4204C819F1D48700432DF5 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4204C719F1D48700432DF5 /* UIImage+ImageEffects.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D07FF2B19EB236400AADB12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D07FF0919EB236300AADB12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D07FF1019EB236300AADB12;
+			remoteInfo = Helpout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D07FF1119EB236300AADB12 /* Helpout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D07FF1519EB236300AADB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D07FF1619EB236300AADB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D07FF1819EB236300AADB12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8D07FF1919EB236300AADB12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8D07FF1F19EB236300AADB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D07FF2119EB236300AADB12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D07FF2419EB236300AADB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8D07FF2A19EB236400AADB12 /* HelpoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D07FF2F19EB236400AADB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D07FF3019EB236400AADB12 /* HelpoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpoutTests.m; sourceTree = "<group>"; };
+		8D07FF3B19EB269400AADB12 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8D07FF3C19EB269400AADB12 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8D07FF3E19EB26A000AADB12 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		8D07FF3F19EB26A000AADB12 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		8D07FF4119EB273C00AADB12 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8D07FF4219EB273C00AADB12 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8D07FF4419EB28C400AADB12 /* TabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarView.h; sourceTree = "<group>"; };
+		8D07FF4519EB28C400AADB12 /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
+		8D07FF4719EB31C900AADB12 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8D07FF4A19EB499C00AADB12 /* SearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarView.h; sourceTree = "<group>"; };
+		8D07FF4B19EB499C00AADB12 /* SearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarView.m; sourceTree = "<group>"; };
+		8D42030E19F1CC5B00432DF5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		8D4204BE19F1CECC00432DF5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8D4204BF19F1CECC00432DF5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8D4204C319F1D25A00432DF5 /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
+		8D4204C619F1D48700432DF5 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		8D4204C719F1D48700432DF5 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D07FF0E19EB236300AADB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07FF4819EB31C900AADB12 /* MapKit.framework in Frameworks */,
+				8D42040E19F1CC5B00432DF5 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07FF2719EB236400AADB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D07FF0819EB236300AADB12 = {
+			isa = PBXGroup;
+			children = (
+				8D07FF1319EB236300AADB12 /* Helpout */,
+				8D42030A19F1CB3000432DF5 /* LoginViewController */,
+				8D07FF3A19EB267400AADB12 /* MainViewController */,
+				8D07FF2D19EB236400AADB12 /* HelpoutTests */,
+				8D07FF1219EB236300AADB12 /* Products */,
+				8D07FF4919EB31FC00AADB12 /* Frameworks */,
+				8D42030B19F1CC5B00432DF5 /* Vendors */,
+				8D4204C219F1D25A00432DF5 /* Images */,
+			);
+			sourceTree = "<group>";
+		};
+		8D07FF1219EB236300AADB12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF1119EB236300AADB12 /* Helpout.app */,
+				8D07FF2A19EB236400AADB12 /* HelpoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D07FF1319EB236300AADB12 /* Helpout */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF1819EB236300AADB12 /* AppDelegate.h */,
+				8D07FF1919EB236300AADB12 /* AppDelegate.m */,
+				8D07FF1E19EB236300AADB12 /* Main.storyboard */,
+				8D07FF2119EB236300AADB12 /* Images.xcassets */,
+				8D07FF2319EB236300AADB12 /* LaunchScreen.xib */,
+				8D07FF1419EB236300AADB12 /* Supporting Files */,
+			);
+			path = Helpout;
+			sourceTree = "<group>";
+		};
+		8D07FF1419EB236300AADB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF1519EB236300AADB12 /* Info.plist */,
+				8D07FF1619EB236300AADB12 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D07FF2D19EB236400AADB12 /* HelpoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF3019EB236400AADB12 /* HelpoutTests.m */,
+				8D07FF2E19EB236400AADB12 /* Supporting Files */,
+			);
+			path = HelpoutTests;
+			sourceTree = "<group>";
+		};
+		8D07FF2E19EB236400AADB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF2F19EB236400AADB12 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D07FF3A19EB267400AADB12 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF3B19EB269400AADB12 /* MainViewController.h */,
+				8D07FF3C19EB269400AADB12 /* MainViewController.m */,
+				8D07FF3E19EB26A000AADB12 /* SettingViewController.h */,
+				8D07FF3F19EB26A000AADB12 /* SettingViewController.m */,
+				8D07FF4119EB273C00AADB12 /* MapViewController.h */,
+				8D07FF4219EB273C00AADB12 /* MapViewController.m */,
+				8D07FF4419EB28C400AADB12 /* TabBarView.h */,
+				8D07FF4519EB28C400AADB12 /* TabBarView.m */,
+				8D07FF4A19EB499C00AADB12 /* SearchBarView.h */,
+				8D07FF4B19EB499C00AADB12 /* SearchBarView.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		8D07FF4919EB31FC00AADB12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D07FF4719EB31C900AADB12 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D42030A19F1CB3000432DF5 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D4204BE19F1CECC00432DF5 /* LoginViewController.h */,
+				8D4204BF19F1CECC00432DF5 /* LoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		8D42030B19F1CC5B00432DF5 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				8D4204C519F1D48700432DF5 /* UIImage-ImageEffects */,
+				8D42030C19F1CC5B00432DF5 /* FacebookSDK */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		8D42030C19F1CC5B00432DF5 /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8D42030E19F1CC5B00432DF5 /* FacebookSDK.framework */,
+			);
+			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
+		8D4204C219F1D25A00432DF5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8D4204C319F1D25A00432DF5 /* login_background.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8D4204C519F1D48700432DF5 /* UIImage-ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				8D4204C619F1D48700432DF5 /* UIImage+ImageEffects.h */,
+				8D4204C719F1D48700432DF5 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage-ImageEffects";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D07FF1019EB236300AADB12 /* Helpout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D07FF3419EB236400AADB12 /* Build configuration list for PBXNativeTarget "Helpout" */;
+			buildPhases = (
+				8D07FF0D19EB236300AADB12 /* Sources */,
+				8D07FF0E19EB236300AADB12 /* Frameworks */,
+				8D07FF0F19EB236300AADB12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Helpout;
+			productName = Helpout;
+			productReference = 8D07FF1119EB236300AADB12 /* Helpout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D07FF2919EB236400AADB12 /* HelpoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D07FF3719EB236400AADB12 /* Build configuration list for PBXNativeTarget "HelpoutTests" */;
+			buildPhases = (
+				8D07FF2619EB236400AADB12 /* Sources */,
+				8D07FF2719EB236400AADB12 /* Frameworks */,
+				8D07FF2819EB236400AADB12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D07FF2C19EB236400AADB12 /* PBXTargetDependency */,
+			);
+			name = HelpoutTests;
+			productName = HelpoutTests;
+			productReference = 8D07FF2A19EB236400AADB12 /* HelpoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D07FF0919EB236300AADB12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Phineas Lue";
+				TargetAttributes = {
+					8D07FF1019EB236300AADB12 = {
+						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8D07FF2919EB236400AADB12 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 8D07FF1019EB236300AADB12;
+					};
+				};
+			};
+			buildConfigurationList = 8D07FF0C19EB236300AADB12 /* Build configuration list for PBXProject "Helpout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				he,
+			);
+			mainGroup = 8D07FF0819EB236300AADB12;
+			productRefGroup = 8D07FF1219EB236300AADB12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D07FF1019EB236300AADB12 /* Helpout */,
+				8D07FF2919EB236400AADB12 /* HelpoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D07FF0F19EB236300AADB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07FF2019EB236300AADB12 /* Main.storyboard in Resources */,
+				8D07FF2519EB236300AADB12 /* LaunchScreen.xib in Resources */,
+				8D07FF2219EB236300AADB12 /* Images.xcassets in Resources */,
+				8D4204C419F1D25A00432DF5 /* login_background.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07FF2819EB236400AADB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D07FF0D19EB236300AADB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4204C019F1CECC00432DF5 /* LoginViewController.m in Sources */,
+				8D07FF4619EB28C400AADB12 /* TabBarView.m in Sources */,
+				8D07FF1A19EB236300AADB12 /* AppDelegate.m in Sources */,
+				8D07FF3D19EB269400AADB12 /* MainViewController.m in Sources */,
+				8D07FF4319EB273C00AADB12 /* MapViewController.m in Sources */,
+				8D4204C819F1D48700432DF5 /* UIImage+ImageEffects.m in Sources */,
+				8D07FF1719EB236300AADB12 /* main.m in Sources */,
+				8D07FF4C19EB499C00AADB12 /* SearchBarView.m in Sources */,
+				8D07FF4019EB26A000AADB12 /* SettingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D07FF2619EB236400AADB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D07FF3119EB236400AADB12 /* HelpoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D07FF2C19EB236400AADB12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D07FF1019EB236300AADB12 /* Helpout */;
+			targetProxy = 8D07FF2B19EB236400AADB12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D07FF1E19EB236300AADB12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D07FF1F19EB236300AADB12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D07FF2319EB236300AADB12 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D07FF2419EB236300AADB12 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D07FF3219EB236400AADB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8D07FF3319EB236400AADB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D07FF3519EB236400AADB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors/FacebookSDK",
+					"$(PROJECT_DIR)/Vendors/FacebookSDK/FBAudienceNetwork",
+				);
+				INFOPLIST_FILE = Helpout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8D07FF3619EB236400AADB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors/FacebookSDK",
+					"$(PROJECT_DIR)/Vendors/FacebookSDK/FBAudienceNetwork",
+				);
+				INFOPLIST_FILE = Helpout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8D07FF3819EB236400AADB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HelpoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helpout.app/Helpout";
+			};
+			name = Debug;
+		};
+		8D07FF3919EB236400AADB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HelpoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helpout.app/Helpout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D07FF0C19EB236300AADB12 /* Build configuration list for PBXProject "Helpout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D07FF3219EB236400AADB12 /* Debug */,
+				8D07FF3319EB236400AADB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D07FF3419EB236400AADB12 /* Build configuration list for PBXNativeTarget "Helpout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D07FF3519EB236400AADB12 /* Debug */,
+				8D07FF3619EB236400AADB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D07FF3719EB236400AADB12 /* Build configuration list for PBXNativeTarget "HelpoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D07FF3819EB236400AADB12 /* Debug */,
+				8D07FF3919EB236400AADB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D07FF0919EB236300AADB12 /* Project object */;
+}
