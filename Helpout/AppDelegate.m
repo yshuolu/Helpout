@@ -10,6 +10,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "LoginViewController.h"
 #import "MainViewController.h"
+#import "LocationManager.h"
+#import "HelpManager.h"
 
 @interface AppDelegate ()
 
@@ -20,14 +22,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
-    MainViewController *mainViewController = [[MainViewController alloc] init];
     
-    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    //check if user already login
+    NSString *userId = [[NSUserDefaults standardUserDefaults] stringForKey:@"userId"];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:nil];
+        
+    if (userId) {
+        HelpManager *sharedInstance = [HelpManager sharedHelpManager];
+        sharedInstance.userId = userId;
+        
+        MainViewController *mainViewController = [[MainViewController alloc] init];
+        [navigationController pushViewController:mainViewController animated:NO];
+        
+    }else {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [navigationController pushViewController:loginViewController animated:NO];
+    }
     
     self.window.rootViewController = navigationController;
+    
+    //init location manager
+    [LocationManager sharedLocationManager];
     
     return YES;
 }

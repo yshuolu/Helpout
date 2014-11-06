@@ -10,14 +10,14 @@
 #import <MapKit/MapKit.h>
 #import "TabBarView.h"
 #import "SearchBarView.h"
+#import "LocationManager.h"
+#import "UIImageView+AFNetworking.h"
 
 #define TABBAR_HEIGHT 80.
 
 #define MAP_VIEW_CONTROLLER_TOGGLE_OFFSET 200.
 
-@interface MapViewController ()<MKMapViewDelegate, CLLocationManagerDelegate, TabBarViewDelegate, SearchBarViewDelegate>
-
-@property (nonatomic, strong) CLLocationManager *locationManager;
+@interface MapViewController ()<MKMapViewDelegate, TabBarViewDelegate, SearchBarViewDelegate>
 
 @property (nonatomic, strong) MKMapView *mapView;
 
@@ -29,20 +29,6 @@
 
 @implementation MapViewController
 
-- (id)init {
-    self = [super init];
-    
-    if (self) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [self.locationManager requestWhenInUseAuthorization];
-        [self.locationManager startUpdatingLocation];
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -50,9 +36,9 @@
     // add map view
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     self.mapView.delegate = self;
-    CLLocationCoordinate2D currentCoordinate = self.locationManager.location.coordinate;
+    CLLocationCoordinate2D currentCoordinate = [[LocationManager sharedLocationManager] currentLocation];
     self.mapView.region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(currentCoordinate.latitude, currentCoordinate.longitude), 1000, 1000);
-    self.mapView.showsUserLocation = YES;
+//    self.mapView.showsUserLocation = YES;
     
     [self.view addSubview:self.mapView];
  
@@ -71,17 +57,35 @@
     self.coverView = [[UIView alloc] initWithFrame:self.view.bounds];
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(restoreMapViewController:)];
     [self.coverView addGestureRecognizer:tapRecognizer];
+    
+    
+    //fetch suggested tasks
+    [self updateHelpAnnotations];
 }
 
-#pragma mark - CLLocationManagerDelegate
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    [self.locationManager stopUpdatingLocation];
+- (void)updateHelpAnnotations {
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    CLLocationCoordinate2D currentCoordinate = [[LocationManager sharedLocationManager] currentLocation];
+    [[HelpManager sharedHelpManager] getSuggestedTasksWithLocation:currentCoordinate andCompletion:^(NSArray *results, NSError *error) {
+        if (!error) {
+            //load annotation
+            for (Help *help in results) {
+                [self.mapView addAnnotation:help];
+            }
+        }
+    }];
 }
 
 #pragma mark - TabBarViewDelegate
 - (void)tabSelectedAtIndex:(NSInteger)index {
     if ([self.delegate respondsToSelector:@selector(tabSelectedAtIndex:)]) {
         [self.delegate tabSelectedAtIndex:index];
+    }
+}
+
+- (void)addButtonClicked {
+    if ([self.delegate respondsToSelector:@selector(addButtonClicked)]) {
+        [self.delegate addButtonClicked];
     }
 }
 
@@ -97,7 +101,9 @@
     
 }
 
-- (void)refreshButtonClicked {}
+- (void)refreshButtonClicked {
+    [self updateHelpAnnotations];
+}
 
 #pragma mark - UITapGestureRecognizer
 - (void)restoreMapViewController:(UITapGestureRecognizer*)recognizer {
@@ -109,6 +115,71 @@
         }
     }];
     
+}
+
+#pragma mark- MKMapViewDelegate
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"HelpIdentifier"];
+    
+    if (!annotationView) {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"HelpIdentifier"];
+    }
+    
+    NSString *tagName;
+    switch (((Help*)annotation).type) {
+        case 0:
+            tagName = @"general";
+            break;
+        
+        case 1:
+            tagName = @"car";
+            break;
+            
+        case 2:
+            tagName = @"house";
+            break;
+            
+        case 3:
+            tagName = @"computer";
+            break;
+            
+        case 4:
+            tagName = @"cleaning";
+            break;
+            
+        default:
+            tagName = @"general";
+            break;
+    }
+    annotationView.image = [UIImage imageNamed:tagName];
+    annotationView.canShowCallout = YES;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.rightCalloutAccessoryView = button;
+    
+    UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    avatarImageView.contentMode = UIViewContentModeScaleAspectFill;
+    avatarImageView.layer.cornerRadius = 15.;
+    avatarImageView.layer.masksToBounds = YES;
+    [avatarImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:AVATAR, ((Help*)annotation).createrFacebookId]]];
+    
+    annotationView.leftCalloutAccessoryView = avatarImageView;
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    if ([self.delegate respondsToSelector:@selector(showDetailHelp:)]) {
+        [self.delegate showDetailHelp:view.annotation];
+    }
+}
+
+- (void)showDetailHelp:(UIButton*)button {
+    if ([self.delegate respondsToSelector:@selector(showDetailHelp:)]) {
+        MKAnnotationView *annotationView = (MKAnnotationView*)button.superview;
+        Help *help = annotationView.annotation;
+        [self.delegate showDetailHelp:help];
+    }
 }
 
 @end

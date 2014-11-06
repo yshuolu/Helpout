@@ -9,6 +9,10 @@
 #import "MainViewController.h"
 #import "MapViewController.h"
 #import "SettingViewController.h"
+#import "CreateTaskViewController.h"
+#import "DetailHelpViewController.h"
+#import "MyHelpoutsViewController.h"
+#import "MyTasksViewController.h"
 
 @interface MainViewController ()<MapViewControllerDelegate, SettingViewControllerDelegate>
 
@@ -45,9 +49,29 @@
 #pragma mark - MapViewControllerDelegate
 
 - (void)tabSelectedAtIndex:(NSInteger)index {
-    SettingViewController *test = [[SettingViewController alloc] init];
+    if (index == 0) {
+        MyHelpoutsViewController *myHelpoutsViewController = [[MyHelpoutsViewController alloc] init];
+        [self.navigationController pushViewController:myHelpoutsViewController animated:YES];
+    }else if (index == 1) {
+        MyTasksViewController *myTasksViewController = [[MyTasksViewController alloc] init];
+        [self.navigationController pushViewController:myTasksViewController animated:YES];
+    }
+}
+
+- (void)addButtonClicked {
+    UIGraphicsBeginImageContext(self.view.bounds.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *currentImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
-    [self.navigationController pushViewController:test animated:YES];
+    CreateTaskViewController *createTaskViewController = [[CreateTaskViewController alloc] initWithBackgroundImage:currentImage];
+    
+    [self.navigationController pushViewController:createTaskViewController animated:YES];
+}
+
+- (void)showDetailHelp:(Help *)help {
+    DetailHelpViewController *detailHelpViewController = [[DetailHelpViewController alloc] initWithHelp:help];
+    [self.navigationController pushViewController:detailHelpViewController animated:YES];
 }
 
 #pragma mark - SettingViewControllerDelegate

@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "MainViewController.h"
+#import "HelpManager.h"
 
 @interface LoginViewController ()<FBLoginViewDelegate>
 
@@ -34,7 +35,7 @@
     titleView.text = @"Welcome to Helpouts";
     [self.view addSubview:titleView];
     
-    FBLoginView *loginView = [[FBLoginView alloc] init];
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
     loginView.delegate = self;
     loginView.center = self.view.center;
     loginView.frame = CGRectOffset(loginView.frame, 0, 20.);
@@ -42,9 +43,24 @@
 }
 
 #pragma mark - FBLoginViewDelegate
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    MainViewController *mainViewController = [[MainViewController alloc] init];
-    [self.navigationController pushViewController:mainViewController animated:YES];
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+    if ([[HelpManager sharedHelpManager] userId]) {
+        return;
+    }
+    
+    //update the userId of HelperManager
+    [[HelpManager sharedHelpManager] setUser:user withCompletion:^(NSError *error) {
+        if (!error) {
+            MainViewController *mainViewController = [[MainViewController alloc] init];
+            [self.navigationController pushViewController:mainViewController animated:YES];
+        }else {
+            //login error
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login failed" message:@"Login failed! Please check the network connection!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
+        }
+    }];
+    
 }
 
 @end

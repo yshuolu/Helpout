@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HelpManager.h"
 
 @protocol MapViewControllerDelegate;
 
@@ -21,5 +22,9 @@
 @optional
 
 - (void)tabSelectedAtIndex:(NSInteger)index;
+
+- (void)addButtonClicked;
+
+- (void)showDetailHelp:(Help*)help;
 
 @end

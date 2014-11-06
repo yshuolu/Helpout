@@ -35,7 +35,7 @@
             //set tab title
             NSString *tabName;
             if (i==0) {
-                tabName = @"My Help Outs";
+                tabName = @"My Helpouts";
             }else if (i==1){
                 tabName = @"My Tasks";
             }else {
@@ -60,7 +60,7 @@
         UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
         addButton.frame = CGRectMake( (CGRectGetWidth(self.bounds) - ADD_BUTTON_SIZE.width) / 2, 0, ADD_BUTTON_SIZE.width, ADD_BUTTON_SIZE.height);
         addButton.layer.cornerRadius = ADD_BUTTON_SIZE.width / 2;
-        addButton.backgroundColor = [UIColor redColor];
+        [addButton setImage:[UIImage imageNamed:@"new.png"] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:addButton];

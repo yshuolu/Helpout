@@ -54,10 +54,8 @@ static NSString *CELL_IDENTIFIER = @"SettingCell";
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
-    }
+
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     
     if (indexPath.section == 0) {
         cell.textLabel.text = @"Logout";
@@ -65,7 +63,7 @@ static NSString *CELL_IDENTIFIER = @"SettingCell";
     
     cell.textLabel.textColor = [UIColor grayColor];
     cell.backgroundColor = [UIColor clearColor];
-    
+
     return cell;
 }
 
