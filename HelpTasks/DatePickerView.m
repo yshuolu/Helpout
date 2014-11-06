@@ -39,7 +39,7 @@
         [containerView addSubview:doneButton];
         
         self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0., CGRectGetMaxY(doneButton.frame)+VERTICAL_MARGIN, CGRectGetWidth(frame), DATE_PICKER_HEIGHT-CGRectGetMaxY(doneButton.frame)-VERTICAL_MARGIN)];
-        self.datePicker.datePickerMode = UIDatePickerModeDate;
+        self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
         [containerView addSubview:self.datePicker];
     }
     

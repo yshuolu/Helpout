@@ -25,4 +25,8 @@
 
 #define APPLY_TASK @"/task/apply"
 
+#define ANSWER_TASK @"/task/answer"
+
+#define FINISH_TASK @"/task/finish"
+
 #endif

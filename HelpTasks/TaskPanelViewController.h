@@ -13,3 +13,13 @@
 - (id)initWithHelpDict:(NSDictionary*)helpDict;
 
 @end
+
+@interface TaskInfoView : UITableViewHeaderFooterView
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UITextView *descriptionLabel;
+
+@property (nonatomic, strong) UILabel *helperNumberLabel;
+
+@end

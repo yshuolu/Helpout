@@ -30,6 +30,8 @@
 
 - (void)getMyCreatedTasksWithCompletion:(void (^)(NSArray *results, NSError *error))completion;
 
-//- (void)confirmChallengers:
+- (void)answerTaskWithTaskId:(NSString*)taskId applicantId:(NSString*)applicantId andCompletion:(void(^)(NSError *error))completion;
+
+- (void)finishTaskWithTaskId:(NSString*)taskId result:(BOOL)result andCompletion:(void(^)(NSError *error))completion;
 
 @end

@@ -129,4 +129,33 @@
     }];
 }
 
+- (void)answerTaskWithTaskId:(NSString *)taskId applicantId:(NSString *)applicantId andCompletion:(void (^)(NSError *))completion {
+    NSDictionary *params = @{
+                             @"userid": self.userId,
+                             @"taskid": taskId,
+                             @"applicantid": applicantId,
+                             @"status": @"True"
+                             };
+    
+    [self.networkManager POST:[REMOTE stringByAppendingPathComponent:ANSWER_TASK] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        completion(nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(error);
+    }];
+}
+
+- (void)finishTaskWithTaskId:(NSString *)taskId result:(BOOL)result andCompletion:(void (^)(NSError *))completion {
+    NSDictionary *parmas = @{
+                             @"userid": self.userId,
+                             @"taskid": taskId,
+                             @"result": result ? @"True" : @"False"
+                             };
+    
+    [self.networkManager POST:[REMOTE stringByAppendingPathComponent:FINISH_TASK] parameters:parmas success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        completion(nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(error);
+    }];
+}
+
 @end
