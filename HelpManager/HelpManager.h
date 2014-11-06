@@ -34,4 +34,6 @@
 
 - (void)finishTaskWithTaskId:(NSString*)taskId result:(BOOL)result andCompletion:(void(^)(NSError *error))completion;
 
+- (void)getMedalsWithCompletion:(void(^)(NSDictionary *result, NSError *error))completion;
+
 @end

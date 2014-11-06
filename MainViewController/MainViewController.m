@@ -13,6 +13,7 @@
 #import "DetailHelpViewController.h"
 #import "MyHelpoutsViewController.h"
 #import "MyTasksViewController.h"
+#import "MedalViewController.h"
 
 @interface MainViewController ()<MapViewControllerDelegate, SettingViewControllerDelegate>
 
@@ -55,6 +56,9 @@
     }else if (index == 1) {
         MyTasksViewController *myTasksViewController = [[MyTasksViewController alloc] init];
         [self.navigationController pushViewController:myTasksViewController animated:YES];
+    }else if (index == 2) {
+        MedalViewController *medalViewController = [[MedalViewController alloc] init];
+        [self.navigationController pushViewController:medalViewController animated:YES];
     }
 }
 

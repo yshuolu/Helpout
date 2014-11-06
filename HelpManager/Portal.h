@@ -29,4 +29,6 @@
 
 #define FINISH_TASK @"/task/finish"
 
+#define MEDAL @"/user/%@/honors"
+
 #endif

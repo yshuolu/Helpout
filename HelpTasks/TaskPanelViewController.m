@@ -48,6 +48,12 @@
         if ([status isEqualToString:@"ongoing"]) {
             [self showDoneButton];
         }
+        
+        if ([self.helpDict[@"result"] isEqualToString:@"success"]) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Success" style:UIBarButtonItemStylePlain target:nil action:nil];
+        }else if ([self.helpDict[@"result"] isEqualToString:@"failure"]) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Fail" style:UIBarButtonItemStylePlain target:nil action:nil];
+        }
     }
     
     return self;

@@ -46,6 +46,7 @@
 		8D4204C019F1CECC00432DF5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4204BF19F1CECC00432DF5 /* LoginViewController.m */; };
 		8D4204C419F1D25A00432DF5 /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D4204C319F1D25A00432DF5 /* login_background.png */; };
 		8D4204C819F1D48700432DF5 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4204C719F1D48700432DF5 /* UIImage+ImageEffects.m */; };
+		8D73AE501A0B2F10008270B8 /* MedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D73AE4F1A0B2F10008270B8 /* MedalViewController.m */; };
 		8DF9EA561A02D60400BA2382 /* HelpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9EA551A02D60400BA2382 /* HelpManager.m */; };
 		8DF9EA6B1A02DA3C00BA2382 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9EA591A02DA3C00BA2382 /* AFHTTPRequestOperation.m */; };
 		8DF9EA6C1A02DA3C00BA2382 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9EA5B1A02DA3C00BA2382 /* AFHTTPRequestOperationManager.m */; };
@@ -138,6 +139,8 @@
 		8D4204C319F1D25A00432DF5 /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
 		8D4204C619F1D48700432DF5 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		8D4204C719F1D48700432DF5 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		8D73AE4E1A0B2F10008270B8 /* MedalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedalViewController.h; sourceTree = "<group>"; };
+		8D73AE4F1A0B2F10008270B8 /* MedalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedalViewController.m; sourceTree = "<group>"; };
 		8DF9EA541A02D60400BA2382 /* HelpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpManager.h; sourceTree = "<group>"; };
 		8DF9EA551A02D60400BA2382 /* HelpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpManager.m; sourceTree = "<group>"; };
 		8DF9EA581A02DA3C00BA2382 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -406,6 +409,8 @@
 				8D01A6881A098DC7003929C1 /* MyTasksViewController.m */,
 				8D01A6941A09A7D3003929C1 /* TaskPanelViewController.h */,
 				8D01A6951A09A7D3003929C1 /* TaskPanelViewController.m */,
+				8D73AE4E1A0B2F10008270B8 /* MedalViewController.h */,
+				8D73AE4F1A0B2F10008270B8 /* MedalViewController.m */,
 			);
 			name = HelpTasksViewControllers;
 			path = HelpTasks;
@@ -536,6 +541,7 @@
 				8D01A6891A098DC7003929C1 /* MyTasksViewController.m in Sources */,
 				8D01A6801A096651003929C1 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				8D07FF3D19EB269400AADB12 /* MainViewController.m in Sources */,
+				8D73AE501A0B2F10008270B8 /* MedalViewController.m in Sources */,
 				8D01A6861A096651003929C1 /* UIWebView+AFNetworking.m in Sources */,
 				8DF9EA781A02E9E000BA2382 /* CreateTaskViewController.m in Sources */,
 				8D01A67F1A096651003929C1 /* AFNetworkActivityIndicatorManager.m in Sources */,

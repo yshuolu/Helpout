@@ -158,4 +158,12 @@
     }];
 }
 
+- (void)getMedalsWithCompletion:(void (^)(NSDictionary *, NSError *))completion {
+    [self.networkManager GET:[NSString stringWithFormat:[REMOTE stringByAppendingPathComponent:MEDAL], self.userId] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        completion(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
 @end
